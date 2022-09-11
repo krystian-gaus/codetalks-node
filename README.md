@@ -96,7 +96,7 @@ Add the following JSON to the [polkadot{.js} Developer Settings](https://polkado
 
 ## Want to learn more about launching a multi-node network?
 
-The three-step process to launch such a network is described in the [wiki](https://gitlab.com/kgaus/codetalks-node/-/wikis/home).
+The three-step process to launch such a network is described in the [wiki](https://github.com/krystian-gaus/codetalks-node/wiki).
 
 ---
 
