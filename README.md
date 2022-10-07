@@ -2,12 +2,24 @@
 
 The node is based on the FRAME-based [Substrate](https://www.substrate.io/) node, ready for hacking :rocket: (see [substrate-node-template](https://github.com/substrate-developer-hub/substrate-node-template)). The code is based on a [Substrate exercise](https://github.com/krystian-gaus/substrate-exercise-7) that I completed within the [Substrate Runtime Developer Academy](https://www.industryconnect.org/substrate-runtime-developer-academy/).
 
+**Remark:** The entire three-step process of launching a multi-node network is described in the [wiki](https://github.com/krystian-gaus/codetalks-node/wiki).
+
 ## Install Substrate
 
-If you haven't already installed Substrate and Rust, run
+Run
 ```bash
-./scripts/getSubstrate.sh
+sudo apt install build-essential
+sudo apt install --assume-yes git clang curl libssl-dev
+sudo apt install --assume-yes git clang curl libssl-dev llvm libudev-dev make protobuf-compiler
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+rustup default stable
+rustup update
+rustup update nightly
+rustup target add wasm32-unknown-unknown --toolchain nightly
 ```
+
+More information can be found [here](https://docs.substrate.io/install/linux/).
 
 ## Build
 
@@ -94,9 +106,6 @@ Add the following JSON to the [polkadot{.js} Developer Settings](https://polkado
 }
 ```
 
-## Want to learn more about launching a multi-node network?
-
-The three-step process to launch such a network is described in the [wiki](https://github.com/krystian-gaus/codetalks-node/wiki).
 
 ---
 
